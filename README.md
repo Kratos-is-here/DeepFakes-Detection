@@ -4,6 +4,7 @@
 
 - We take 15 uniformly time-spaced frames from the video and work upon them.
 - Then we crop out the area around the person's face in each frame using the RetinaFace module.
+- RetinaFace performs pixel-wise face localisation on various scales of faces by taking advantages of joint extra-supervised and self-supervised multi-task learning. RetinaFace outperforms the state of the art average precision (AP) by 1.1% 
 - We use Retina-Face with Resnet-50 as the encoder model.
 - After getting the cropped face we normalizing it and resize every pictures to (320,320,3) shape, i.e. an rgb image of 320px * 320px
 - We finally use an ensemble of Efficient-Net and Xception net by getting there predictions as probabilites and then try out different ratios for the both of them.
